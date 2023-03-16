@@ -1,0 +1,176 @@
+<div class="container">
+<h1> 2023 Enrolment form</h1>
+
+
+
+<form class="row g-3">
+    <!-- <div class="col-md-4">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div> -->
+    <!-- new -->
+    <div class="col-md-4">
+      <label for="inputEmail4"  class="form-label">Firstname</label>
+      <input type="firstname" [(ngModel)]="fname" name="name" class="form-control" id="inputname">
+    </div>
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">Lastname</label>
+      <input type="lastname" [(ngModel)]="lname" name="lname"class="form-control" id="inputlastname">
+    </div>
+    <!-- end -->
+    <!-- gender -->
+     <div class="col-8">
+      <div class="form-check"> 
+    <p>*Please select your gender:</p>
+    <input type="radio" id="male" name="fav_language" value="MALE" [(ngModel)]="gender" name="gen">
+    <label for="male">male</label><br>
+    <input type="radio" id="female" name="fav_language" value="female" [(ngModel)]="gender" name="gen">
+    <label for="female">female</label><br>
+      </div>
+      </div>
+      
+    <!-- end -->
+    <div class="col-8">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" [(ngModel)]="address" name="addr" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-8">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text"[(ngModel)]="address2" name="addr2"class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-5">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" [(ngModel)]="city" name="cit"class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-3">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+        <option selected>kerala</option>
+        <option>others</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip/postalcode</label>
+      <input type="text"[(ngModel)]="postal" name="post" class="form-control" id="inputZip">
+    </div>
+    <!--  -->
+    <div class="col-md-3">
+      <label for="inputState" class="form-label">Dance Form</label>
+      <select id="inputState" class="form-select">
+        <option selected>classical</option>
+        <option>contemporary</option>
+        <option>jazz</option>
+        <option>hiphop</option>
+      </select>
+    </div>
+    <!--  -->
+    
+    <!-- <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div> -->
+    <!-- <h4 class="mb-3">Payment</h4> -->
+                      <br>
+            
+                      <div class="my-3">
+                        <div class="form-check">
+                          <input
+                            id="credit"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            checked
+                            required
+                          />
+                          <label class="form-check-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            id="debit"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            required
+                          />
+                          <label class="form-check-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            id="paypal"
+                            name="paymentMethod"
+                            type="radio"
+                            class="form-check-input"
+                            required
+                          />
+                          <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                      </div>
+            
+                      <div class="row gy-3">
+                        <div class="col-md-5">
+                          <label for="cc-name" class="form-label">Name on card</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-name"
+                            placeholder=""
+                            required
+                          />
+                          <small class="text-muted">Full name as displayed on card</small>
+                          <div class="invalid-feedback">Name on card is required</div>
+                        </div>
+            
+                        <div class="col-md-5">
+                          <label for="cc-number" class="form-label"
+                            >Credit card number</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-number"
+                            placeholder=""
+                            required
+                          />
+                          <div class="invalid-feedback">Credit card number is required</div>
+                        </div>
+            
+                        <div class="col-md-3">
+                          <label for="cc-expiration" class="form-label">Expiration</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-expiration"
+                            placeholder=""
+                            required
+                          />
+                          <div class="invalid-feedback">Expiration date required</div>
+                        </div>
+            
+                        <div class="col-md-3">
+                          <label for="cc-cvv" class="form-label">CVV</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-cvv"
+                            placeholder=""
+                            required
+                          />
+                          <div class="invalid-feedback">Security code required</div>
+                        </div>
+                      </div>
+            
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary "(click)="register()">Enrol</button>
+    </div>
+    <!-- <a routerLink="/payment" class="btn btn-dark" role="button">pay</a> -->
+  </form>
+</div>

@@ -1,0 +1,24 @@
+h1{
+    color:white;
+    font:42px Raleway;
+    text-decoration: underline;
+    text-align:absolute;
+    padding: 100px;
+}
+label{
+    color :white;
+    
+}
+.form-label{
+    color: white;
+}
+p{
+    color:white;
+    text-align :left;
+    
+}
+
+.form-check{
+    padding-left: 0 !important;
+}
+

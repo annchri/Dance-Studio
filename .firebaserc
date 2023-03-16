@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dance-studio-1bc96": {
+      "hosting": {
+        "DanceStudio": [
+          "dance-studio-1bc96"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dance-studio-1bc96"
+  }
+}

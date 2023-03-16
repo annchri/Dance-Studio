@@ -1,0 +1,132 @@
+<div class="container">
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col" style="text-align: justify;">
+        <h1>ABOUT US</h1>
+<p>                  DANCESTUDIO was established in 2018 and has quickly become one of NZ’s leading dance studios. Our purpose built studio facilities have wooden sprung floors, heat pumps and wall to wall mirrors that are suitable for all genres of dance.
+
+  Studio culture is BIG for us at DANCESTUDIO, and we are all about inclusivity & supporting each other. Along with our Students & their families, we have built an incredible community that allows dancers of all ages and abilities to feel encouraged and reach their full potential. 
+  
+  Our studio philosophy is to provide an environment where our students can collectively grow and develop their love for dance, all while building confidence and social skills.
+  
+  Our teachers are experienced industry professionals that are dedicated to bring your passion for dance to life. Our classes are full of energy and encouragement, and as a studio we endeavour to offer a nurturing and supportive environment.
+  
+  Whether you are interested in enrolling your child or taking a class for yourself - DANCESTUDIO is a family friendly studio offering classes for all ages and skills.
+</p>
+      </div>
+      <div class="col">
+        <br><br><br><br><br><br><br><br><br>
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <h3>EMAIL</h3>
+              <p>infoDStudio@gmail.com</p>
+              
+            </div>
+          </div>
+        </div>
+<br>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <h3>LOCATION</h3>
+              <p>72 Delta Avenue, New Lynn,</p>
+              <p>Auckland 06000000.</p>
+              
+            </div>
+          </div>
+        </div>
+
+<br>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <h3>PHONE</h3>
+              <p>+11112222333</p>
+              
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<h1>OUR TEAM</h1>
+
+
+
+<!----->
+<!--<p>-pages works!</p>-->
+<div class="container"></div>
+<div class ="row mt-3" >
+  <div class="col mt-4" *ngFor="let item of dancers">
+<div class="card" style="width: 18rem;">
+    <img src="{{item.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-name">{{item.name}}</h5>
+      <p class="card-Description">{{item.Description}}</p>
+     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  <a (click)="gotoHere(item.name,item.cat)" class="btn btn-primary">show more</a>
+
+          
+        </div>
+  </div>
+
+
+ 
+
+  <!---->
+  
+  
+  <!---->
+    </div>
+    </div>
+
+
+   
+
+   <H1>CLASSES</H1>
+  
+  <div class="container"></div>
+<div class ="row mt-3" >
+  <div class="col mt-4" *ngFor="let item of classes">
+<div class="card" style="width: 18rem;">
+    <img src="{{item.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-form">{{item.name}}</h5>
+      <p class="card-Description">{{item.Description}}</p> 
+   <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+     <a (click)="gotoHere(item.name,item.cat)" class="btn btn-primary">show more</a>  
+
+
+
+
+
+
+
+
+  <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          showmore
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"></div> -->
+      <!-- <p class="card-text">{{item.detail}}</p>
+      </div>
+    </div> -->
+  
+          
+        
+        <!-- </div>
+      </div>
+    </div>  -->
