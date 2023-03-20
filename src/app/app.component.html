@@ -1,7 +1,7 @@
 <!--navbar-->
-<app-navbar></app-navbar>
+<app-navbar *ngIf="afa.user |async as user"></app-navbar>
 
 <router-outlet></router-outlet>
 
 <!--footer-->
-<app-footer></app-footer>
+<app-footer *ngIf="afa.user |async as user"></app-footer>

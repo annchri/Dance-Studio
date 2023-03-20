@@ -14,7 +14,15 @@ address:string=''
 address2:string=''
 city:string=''
 postal:string=''
-
+state:string=''
+form:string=''
+credit:string=''
+ debit:string=''
+paypal:string=''
+nameon:string=''
+creditno:string=''
+Expiration:string=''
+cvv:string=''
   constructor(private fired:FireService){}
   register(){ 
     let info={
@@ -24,8 +32,35 @@ postal:string=''
      address:this.address,
      address2:this.address2,
      city:this.city,
-     postal:this.postal
-
+     postal:this.postal,
+     state:this.state,
+     form:this.form,
+     credit:this.credit,
+     
+     debit:this.debit,
+      paypal:this.paypal,
+     nameon:this.nameon,
+     creditno:this.creditno,
+     Expiration:this.Expiration,
+     cvv:this.cvv
+    
     }
+    this.fired.register(info)
+    this.fname=''
+    this.lname=''
+    this.gender=''
+    this.address=''
+    this.address2=''
+    this.city=''
+    this.postal=''
+    this.state=''
+    this.form=''
+    this.credit=''
+    this.debit=''
+    this.paypal=''
+    this.nameon=''
+    this.creditno=''
+    this.Expiration=''
+    this.cvv=''
   }
 }

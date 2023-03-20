@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FireService } from 'src/app/fire.service';
-import { AngularFireAuth} from '@angular/fire/compat/auth'
+
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -12,5 +13,4 @@ export class NavbarComponent {
 logout(){
   this.fired.logOut()
 }
-
 }

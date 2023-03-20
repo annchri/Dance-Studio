@@ -9,16 +9,39 @@ import { PortfolioPagesComponent } from './pages/portfolio-pages/portfolio-pages
 import { RegisterPagesComponent } from './pages/register-pages/register-pages.component';
 import { SignupPagesComponent } from './pages/signup-pages/signup-pages.component';
 import { SinglePagesComponent } from './pages/single-pages/single-pages.component';
+import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/compat/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectLoggedInToItems = () => redirectLoggedInTo(['home']);
 
 const routes: Routes = [
-  {path:'',component:HomePagesComponent},
-  {path:'about',component:AboutPagesComponent},
-  {path:'portfolio',component:PortfolioPagesComponent},
-  {path:'contact',component:ContactPagesComponent},
-  {path:'single',component:SinglePagesComponent},
-  {path:'register',component:RegisterPagesComponent},
-  {path:'login',component:LoginPagesComponent},
-  {path:'signup',component:SignupPagesComponent},
+  {
+    path:'' ,redirectTo:'login',pathMatch:'full'
+  },
+  {
+    path:'home',component:HomePagesComponent,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
+  {
+    path:'about',component:AboutPagesComponent,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
+  {
+    path:'portfolio',component:PortfolioPagesComponent,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
+  {
+    path:'contact',component:ContactPagesComponent,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
+  {
+    path:'single',component:SinglePagesComponent,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
+  {
+    path:'register',component:RegisterPagesComponent,canActivate: [AngularFireAuthGuard],data: { authGuardPipe: redirectUnauthorizedToLogin }
+  },
+  {
+    path:'login',component:LoginPagesComponent,canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectLoggedInToItems } 
+  },
+  {
+    path:'signup',component:SignupPagesComponent,canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectLoggedInToItems }
+  },
   
 ];
 

@@ -48,7 +48,7 @@
     </div>
     <div class="col-md-3">
       <label for="inputState" class="form-label">State</label>
-      <select id="inputState" class="form-select">
+      <select id="inputState" [(ngModel)]="state" name="stn" class="form-select">
         <option selected>kerala</option>
         <option>others</option>
       </select>
@@ -60,11 +60,11 @@
     <!--  -->
     <div class="col-md-3">
       <label for="inputState" class="form-label">Dance Form</label>
-      <select id="inputState" class="form-select">
-        <option selected>classical</option>
-        <option>contemporary</option>
-        <option>jazz</option>
-        <option>hiphop</option>
+      <select id="inputState"  name="dance"  class="form-select" [(ngModel)]="form">
+        <option selected  value="classical">classical</option>
+        <option value="contemporary">contemporary</option>
+        <option  value="jazz">jazz</option>
+        <option  value="hiphop">hiphop</option>
       </select>
     </div>
     <!--  -->
@@ -85,6 +85,8 @@
                           <input
                             id="credit"
                             name="paymentMethod"
+                            [(ngModel)]="credit" 
+                            value="credit"
                             type="radio"
                             class="form-check-input"
                             checked
@@ -92,27 +94,31 @@
                           />
                           <label class="form-check-label" for="credit">Credit card</label>
                         </div>
-                        <div class="form-check">
+                         <div class="form-check">
                           <input
                             id="debit"
                             name="paymentMethod"
+                            [(ngModel)]="debit" 
+                            value="debit"
                             type="radio"
                             class="form-check-input"
-                            required
+                            required [(ngModel)]="debit" 
                           />
                           <label class="form-check-label" for="debit">Debit card</label>
                         </div>
-                        <div class="form-check">
+                         <div class="form-check">
                           <input
                             id="paypal"
                             name="paymentMethod"
+                            [(ngModel)]="paypal" 
+                            value="paypal"
                             type="radio"
                             class="form-check-input"
-                            required
+                            required 
                           />
                           <label class="form-check-label" for="paypal">PayPal</label>
                         </div>
-                      </div>
+                      <!-- </div>  -->
             
                       <div class="row gy-3">
                         <div class="col-md-5">
@@ -122,7 +128,7 @@
                             class="form-control"
                             id="cc-name"
                             placeholder=""
-                            required
+                            required [(ngModel)]="nameon" name="card" 
                           />
                           <small class="text-muted">Full name as displayed on card</small>
                           <div class="invalid-feedback">Name on card is required</div>
@@ -137,7 +143,7 @@
                             class="form-control"
                             id="cc-number"
                             placeholder=""
-                            required
+                            required [(ngModel)]="creditno" name="cardno" 
                           />
                           <div class="invalid-feedback">Credit card number is required</div>
                         </div>
@@ -149,7 +155,7 @@
                             class="form-control"
                             id="cc-expiration"
                             placeholder=""
-                            required
+                            required [(ngModel)]="Expiration" name="expr" 
                           />
                           <div class="invalid-feedback">Expiration date required</div>
                         </div>
@@ -161,16 +167,16 @@
                             class="form-control"
                             id="cc-cvv"
                             placeholder=""
-                            required
+                            required [(ngModel)]="cvv" name="cvvno"
                           />
                           <div class="invalid-feedback">Security code required</div>
                         </div>
                       </div>
             
-    
+    <br><br><br>
     <div class="col-12">
-      <button type="submit" class="btn btn-primary "(click)="register()">Enrol</button>
+      <button type="submit" class="btn btn-primary" (click)="register()">Enrol</button>
     </div>
     <!-- <a routerLink="/payment" class="btn btn-dark" role="button">pay</a> -->
-  </form>
+  <!-- </form> -->
 </div>

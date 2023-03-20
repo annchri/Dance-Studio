@@ -12,7 +12,7 @@ export class FireService {
   signUp (email:string,pass: string){
     createUserWithEmailAndPassword(this.auth,email,pass).then(res => {
       alert("Sign up successfully")
-      this.router.navigate(['/'])
+      this.router.navigate(['/home'])
     }).catch(err => {
       alert(err)
     })
@@ -31,7 +31,7 @@ export class FireService {
   logIn(email:string,pass:string){
     signInWithEmailAndPassword(this.auth,email,pass).then(res =>{
       alert("Log In successfully")
-      this.router.navigate(['/'])
+      this.router.navigate(['/home'])
     }).catch(err => {
       alert(err)
     })
@@ -47,11 +47,14 @@ export class FireService {
   }
   //register()
   register(data:any){
+    console.log(data);
     const registerCollection=collection(this.fire,'registerDetails')
     addDoc(registerCollection,data).then(res=>{
+      console.log(res);
       alert("data added successfully")
     }).catch(err=>{
       alert(err)
     })
   }
+
 }
